@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PortFolio_laxmikant</title>
+	<link rel="icon" type="image" href="jp.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Black Ops One' rel='stylesheet'>
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+    	*{
+    		margin: 0px;
+    		padding: 0px;
+    		font-family: sans-serif;
+
+    	}
+    	body{
+    		margin: 0px;
+    		background-color: lightgray;
+
+    	}
+    	.banner{
+    		width: 100%;
+    		height: 100vh;
+    		position: relative;
+    		overflow: hidden;
+    	}
+    	.slider{
+    		width: 100%;
+    		height: 100vh;
+    		position: absolute;
+    		top: 0;
+    	}
+    	#sliderimg{
+    		width: 100%;
+    		height: 100%;
+    	}
+    	.overlay{
+    		width: 100%;
+    		height: 100vh;
+    		background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    		position: absolute;
+    		top: 0;
+    	}
+    	
+		.topnav {
+		  overflow: hidden;
+		  background-color:rgb(30, 30, 85);
+		}
+
+		.topnav a {
+		  float: left;
+		  display: block;
+		  color: #f2f2f2;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		  font-weight: bold;
+		}
+
+		.topnav a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+
+		.topnav a.active {
+		  background-color: rgb(17, 50, 102);
+		  color: white;
+		}
+
+		.topnav .icon {
+		  display: none;
+		}
+
+		@media screen and (max-width: 600px) {
+		  .topnav a:not(:first-child) {display: none;}
+		  .topnav a.icon {
+		    float: right;
+		    display: block;
+		  }
+		}
+
+		@media screen and (max-width: 600px) {
+		  .topnav.responsive {position: relative;}
+		  .topnav.responsive .icon {
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		  }
+		  .topnav.responsive a {
+		    float: none;
+		    display: block;
+		    text-align: left;
+		  }
+		}
+		#abt_img{
+			height: 130px;
+			width: 130px;
+			border: 4px solid white;
+			border-radius: 50%;
+		}
+		#Fname{
+			color: white;
+			font-weight: bold;
+			font-size: 40px;
+		}
+		#Lname{
+			color:crimson;
+			font-weight: bold;
+			font-size: 40px;
+		}
+		#details{
+			color: white;
+			background-color:transparent ;
+		}
+		
+		.font{
+			font-weight: bold;
+		}
+		#about_me{
+			background-image: url(bg1.png);		}
+		#font, #Fname, #Lname{
+			font-family: 'Acme';
+		}
+		#font1{
+			 font-family: 'Black Ops One';
+			 margin: 5px 0;
+		}
+		.f{
+			 font-size: 30px;
+			 text-decoration: none;
+			 margin: 5px;
+			 color: rgb(8, 8, 102);
+		}
+		.f:hover{
+			text-decoration: none;
+		}
+		.v_nav{
+			font-size: 22px;
+			color: white;
+			font-family: sans-serif;
+		}
+		th{
+			font-size: 20px;
+			text-align: center;
+		}
+		td{
+			font-size: 18px;
+			text-align: center;
+		}
+		#G_img{
+			width: 100%;
+			height: 200px;
+		}
+		.edu_heading{
+			font-family: 'Black Ops One';
+			font-size: 27px;
+			text-decoration: underline overline;
+		}
+		.gallery-wrap{
+			width: 100%;
+			padding: 15px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.gallery-box{
+			flex:0 0 calc(20% - 30%);
+			margin: 15px;
+		}
+		.gallery-box img{
+			max-width: 100%;
+			min-width: 100%;
+		}
+		#project{
+			background-color: #ededed;
+		}
+		.gallery{
+			margin: 10px 50px;
+		}
+		.gallery img{
+			height: 170px;
+			width:170px;
+			margin: 5px;
+			filter: grayscale(80%);
+			transition: 1s;
+		}
+		.gallery img:hover{
+			filter: grayscale(0%);
+			transform: scale(1.1);
+		}
+		#title_img{
+			filter: grayscale(60%);
+			transition: 1s;
+		}
+		#title_img:hover{
+			filter: grayscale(0%);
+			transform: scale(1.1);
+		}
+		.purple-border textarea {
+   			 border: 1px solid #ba68c8;
+			}
+
+		.purple-border .form-control:focus {
+		    border: 1px solid #ba68c8;
+		    box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
+		}
+		.purple-border input{
+   			 border: 1px solid #ba68c8;
+			}
+		#contact{
+			background-image:url(contact.jpg);
+			background-size: cover;
+		}
+		iframe:hover{
+			transition: 1s;
+			transform: scale(0.9);
+		}
+		#footer{
+			background-image: url(footer.webp);
+			background-size: cover;
+		}
+		.ft:hover{
+			background-color: white;
+			color: green;
+		}
+		#typed{
+			color: white;
+			font-size: 35px;
+		}
+		@media (max-width: 768px) 
+		 {
+		   
+		    #typed
+		    {
+		        font-size:20px;
+		    }
+		}
+		@media (max-width: 400px) 
+		 {
+		   
+		    #typed
+		    {
+		        font-size:10px;
+		    }
+		}
+    </style>
+</head>
+<div class="container">
+<body onload="slider()">
+	
+	<div class="container-fluid bg-light">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="banner">
+					<div class="slider">
+						<img src="slider.webp" alt="slider" id="sliderimg">
+					</div>
+					<div class="overlay">
+						<div class="topnav" id="myTopnav">
+						  <a href="#home" class="active">Home</a>
+						  <a href="#about_me">About</a>
+						  <a href="#news">Project</a>
+						  <a href="cv.pdf" target="_blank">Resume</a>
+						  <a href="#contact">Contact</a>
+						  <a href="#about">More</a>
+						  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						    <i class="fa fa-bars"></i>
+						  </a>
+
+						</div>
+
+
+						
+
+
+						<!-- slider about start -->
+						<div class="slider_about text-center m-5">
+							<img src="lp.png" id="abt_img">
+							<h3 align="center" id="Fname">Laxmikant <span id="Lname">Madane</span></h3>
+							<div>
+						        <span id="typed"></span>
+						    </div>
+							<h5 style="color:#04AA6D;"><u style="background-color:rgb(11, 11, 58); color: white;"> I Creates The Best Websites </u></h5>
+							<button class="btn btn-outline-danger"><a href="#about_me" style="text-decoration: none; color: white; font-weight: bold;">About Me</a></button>
+						</div>
+						<!-- slider about End -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- About Row start-->
+		<div class="row" id="about_me">
+			<h2 align="center" style="font-weight: bold; background-color: rgb(88, 11, 11);" class="my-2">
+							<div class="spinner-grow text-info spinner-grow-md"></div>
+							<div class="spinner-grow text-warning spinner-grow-md"></div>
+							<div class="spinner-grow text-danger spinner-grow-md"></div>
+				
+							<u  id="font1" style="color: white;">ABOUT <span style="color:white; font-size: 35px;"  id="font1">Me</span></u>
+
+							<div class="spinner-grow text-info spinner-grow-md"></div>
+							<div class="spinner-grow text-warning spinner-grow-md"></div>
+							<div class="spinner-grow text-danger spinner-grow-md"></div>
+			</h2>
+			
+			<div class="col-md-8">
+				<h3 style="font-weight: bold;" class="my-3" align="center" id="font">My Name is <span style="color:blue ; font-size: 25px;"><u>Laxmikant Shankar Madane</u></span></h3>
+				<p style="text-align: justify; font-weight: bold; text-indent: 40px;">
+					I am a <span style="color:orange ;">front-end Web developer.</span> I can provide Clean Code & pixel perfect designs.I also make the website more & more interactive with web animations.A responsive design makes your website accessible to all users,regardless of their device.
+				</p>
+				
+						
+					
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-5 d1">
+						
+							<h6 class="my-4 font">Age :<span style="color:black;"> 22</span></h6>							
+							<h6 class="my-4 font">Gender :<span style="color:black;"> Male</span></h6>
+							<h6 class="my-4 font">Language :<span style="color:black;"> Marathi/Hindi/English</span></h6><br>
+						
+					</div>
+					<div class="col-md-5 d1">
+						
+							<h6 class="my-4 font">Mobile No :<span style="color:blue;"> 7745872023</span></h6>
+							<h6 class="my-4 font">Email :<span style="color:blue; background-color: white;"> laxman2madane@gmail.com</span></h6>
+							<h6 class="my-4 font">Address :<span style="color:blue ;"> Yavatmal</span></h6>
+						
+					</div>
+					<div class="row">
+						<div class="col-md-5 text-center">
+							<a href="#" class="fa fa-linkedin f"></a>
+							<a href="#" class="fa fa-facebook f"></a>
+							<a href="#" class="fa fa-twitter f"></a>
+							<a href="#" class="fa fa-google f"></a>
+							<a href="#" class="fa fa-instagram f"></a>
+						</div>
+						<div class="col-md-3 text-center mb-1"><button class="btn btn-success" style="background-color: orange;">Download Resume</button></div>
+					</div>
+				</div>
+								
+			</div>
+			<div class="col-md-4 text-center">
+				<img src="lp.png" class="m-2 mb-0 about_img1" style="height: 380px; width:300px;">
+			</div>
+			
+		</div><br>
+		<!-- About Row End-->
+	
+		<div class="row bg-light">
+			<div class="col-md-12">
+				<h2 class="text-center" style=" background-color: rgb(102, 10, 10);"><u style="font-weight: bold; color: white; font-family: 'Black Ops One';">Gallery</u></h2>
+			<div class="text-center gallery">	
+				<marquee behavior="scroll" direction="top">
+			   <a href="page1.png"><img src="page1.png" style="border: 3px solid red;"></a>
+			   <a href="page2.jpg"><img src="page2.jpg" style="border: 3px solid red;"></a>
+			   <a href="page3.png"> <img src="page3.png" style="border: 3px solid red;"></a>
+			   <a href="page4.png"> <img src="page4.png" style="border: 3px solid red;"></a>
+			   <a href="page5.webp"> <img src="page5.webp " style="border: 3px solid red;"></a>
+			   <a href="page6.png"><img src="page6.png" style="border: 3px solid red;"></a>
+			   <a href="design1.webp"><img src="design1.webp" style="border: 3px solid red;"></a>
+			   <a href="design2.jpg"><img src="design2.jpg" style="border: 3px solid red;"></a>
+			   <a href="design3.png"><img src="design3.png" style="border: 3px solid red;"></a>
+			   <a href="design4.png"><img src="design4.png" style="border: 3px solid red;"></a>
+			   <a href="design5.jpg"><img src="design5.jpg" style="border: 3px solid red;"></a>
+			   <a href="design6.jpg"><img src="design6.jpg" style="border: 3px solid red;"></a>
+			</marquee>
+			</div>
+			</div>
+		</div>
+
+			<script type="text/javascript">
+				$(document).ready(function(){
+					 $("#edu").hide();
+					 $("#skill").hide();
+					 $("#project").hide();
+					 
+				});
+			</script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+				    $("#edu_btn").click(function(){
+				        $("#edu").show();
+				        $("#skill").hide();
+				        $("#off").hide();
+				    });
+				    $("#skill_btn").click(function(){
+				        $("#edu").hide();
+				        $("#skill").show();
+				        $("#off").hide();
+				    });
+				});
+			</script>
+		   
+
+		<div class="row bg-dark my-1">
+			<div class="col-md-3"></div>
+		    <div class="col-md-2 text-center"><a href="#edu" class="btn btn-outline-light mx-2 my-2" type="button" id="edu_btn"><b>Education</b></a></div>
+		    <div class="col-md-2 text-center"><a href="resume.pdf" class="btn btn-outline-light mx-2 my-2" type="button" target="_blank"><b>Resume</b></a></div>
+		    <div class="col-md-2 text-center"><a href="#skill" class="btn btn-outline-light mx-2 my-2" type="button" id="skill_btn"><b>Skills</b></a></div>
+  		</div>
+
+  		<div id="off">
+		    <img src="bg2.png" height="300px" width="100%"><br>
+		</div>
+
+		<div class="row bg-light" id="edu">
+		    <div class="col-md-3">
+		      <img src="edu_bg.png" width="100%" height="260px" id="title_img">
+		    </div>
+		    <div class="col-md-9">
+		      	<h2 class="text-light bg-success" align="center"><u class="edu_heading">Education</u></h2>
+		   			 <div class="table-responsive">
+		                   <table class="table table-hover">
+		                       <thead>
+		                           <tr>
+		                               <th>Course</th>
+		                               <th>College/University</th>
+		                               <th>Year Of Passing</th>
+		                               <th>Percentage/CGPA</th>
+		                           </tr>
+		                       </thead>
+		                       <tbody>
+		                           <tr>
+		                               <td>BE( EE )</td>
+		                               <td>Sant gadge baba Amravati University</td>
+		                               <td>2022</td>
+		                               <td>Pursuing</td>
+		                           </tr>
+		                           <tr>
+		                               <td>HSC(12th)</td>
+		                               <td>Maharashtra State Board</td>
+		                               <td>2016</td>
+		                               <td>64.31</td>
+		                           </tr>
+		                           <tr>
+		                             <td>SSC(10th)</td>
+		                               <td>Maharashtra State Board</td>
+		                               <td>2014</td>
+		                               <td>69.69</td>
+		                           </tr>
+		                           
+		                       </tbody>
+		                    </table>
+		            </div>  
+		    </div>
+ 		</div>
+
+ 		<div class="row bg-dark" id="skill">
+		    <div class="col-md-3">
+		      <img src="skill_bg.png" width="100%" height="200px" id="title_img" class="my-4">
+		    </div>  
+		    <div class="col-md-9">
+		      <h2 align="center" class="bg-success"><u class="text-light edu_heading">Skills</u></h2>
+		    <div class="col-md-1"></div>
+		    <div class="col-md-9">
+		      <div class="progress my-2">
+		        <div class="progress-bar bg-warning" style="width:70%">C Programming (70%)</div>
+		      </div>
+		      <div class="progress my-2">
+		        <div class="progress-bar bg-success" style="width:95%">HTML (95%)</div>
+		      </div>
+		      <div class="progress my-2">
+		        <div class="progress-bar bg-info" style="width:80%">CSS (80%)</div>
+		      </div>
+		      <div class="progress my-2">
+		        <div class="progress-bar bg-danger" style="width:85%">Python (50%)</div>
+		      </div>
+		      <div class="progress my-2">
+		        <div class="progress-bar bg-secondary" style="width:90%">BootStrap (90%)</div>
+		      </div>
+		      <div class="progress my-2">
+		        <div class="progress-bar bg-warning" style="width:70%">JavaScript (70%)</div>
+		      </div>
+		      <div class="progress my-2">
+		        <div class="progress-bar bg-primary" style="width:60%">React Js (60%)</div>
+		      </div>
+    		</div>
+    	</div>
+
+</div>    
+ <!--container End -->
+<div class="container" id="Gallery_contact">
+	 <div class="row bg-light row1" id="row1">
+		<div class="col-md-9">
+			<h2 class="text-dark my-2" align="center" style="background-color:rgb(78, 11, 11) ;"><b><u style="font-family: 'Black Ops One'; color: white;">Projects</u></b></h2>
+		<div class="table-responsive ms-2">
+	                 <table class="table table-hover">
+	                     <thead>
+	                         <tr>
+	                             <th>Sr.no</th>
+	                             <th>Project Name</th>
+	                             <th>Using Languages</th>
+	                             <th>View</th>
+	                         </tr>
+	                     </thead>
+	                     <tbody>
+	                         <tr>
+	                             <td>1</td>
+	                             <td>Landing page</td>
+	                             <td>Html,Css</td>
+	                             <td><a href="mahurgad.html" target="_blank"> <a href="coofee and industry/coffepage.html"> View </a></td>
+	                         </tr>
+	                         <tr>
+	                             <td>2</td>
+	                             <td>industrial Page</td>
+	                             <td>Html,Css</td>
+	                             <td><a href="tourist.html" target="_blank">  <a href="coofee and industry/industrialpage.html"> View </a></td>
+	                         </tr>
+	                         <tr>
+	                         	 <td>3</td>
+	                             <td>youtube page</td>
+	                             <td>Html,Css</td>
+	                             <td><a href="site1.html" target="_blank"> <a href="project/ytube.html"> View </a></td>
+	                         </tr>
+	                         <tr>
+	                         	 <td>4</td>
+	                             <td>shoping website</td>
+	                             <td>BootStrap</td>
+	                             <td><a href="site2.html" target="_blank"><a href="http://laxmikantwebsite.online/">View </a></td>
+	                         </tr>
+	                         <tr>
+	                         	 <td>5</td>
+	                             <td>PortFolio_lm page2</td>
+	                             <td>BootStrap</td>
+	                             <td><a href="site3.html" target="_blank"> <a href="file:///E:/PORTFOLIO/index.html"> View</a></td>
+	                         </tr>
+	                         
+	                     </tbody>
+	                 </table>
+	            </div>	
+		</div>
+		<div class="col-md-3">
+			 <img src="project_bg.jpg" width="100%" height="270px" style="margin-top: 45px;" id="title_img">
+		</div>
+	</div>
+
+	<div class="row" id="contact">
+		<h2 class="text-center" style="font-weight: bold; background-color:rgb(99, 17, 17);"><u style="font-family: 'Black Ops One';color: white;">Contact <span style="font-family: 'Black Ops One';">Us</span></u></h2>
+		<div class="col-md-4">
+			<div class="row ">
+				<iframe src="https://www.google.com/maps/embed?																		pb=!1m18!1m12!1m3!1d23459.62311554225!2d78.09852150810183!3d20.391610263303615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd3e8cc8bb44edd%3A0x4877adea41ecbee0!2sYavatmal%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1641912211621!5m2!1sen!2sin" width="100%" height="400px" allowfullscreen="" loading="lazy">
+				</iframe>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<form autocomplete="off" style="background-color: rgb(24, 24, 66); border:3px solid yellow"><br>
+					<div class="purple-border"><input type="text" class="form-control" placeholder="Enter Full Name" name="Name" class="purple-border"></div><br>
+			     
+			        <div class="purple-border"><input type="email" class="form-control" placeholder="Enter Email" name="email"></div><br>
+
+			         <div class="purple-border"><input type="tel" class="form-control" placeholder="Enter Mobile Number" name="tel"></div><br>
+			     
+			        <div class="purple-border"><input type="text" class="form-control" placeholder="Enter your Address" name="address"></div><br>
+			      	
+			      	<div class="form-group purple-border">
+					  <textarea class="form-control" id="textarea" rows="3" placeholder="Write your message here"></textarea>
+					</div><br>
+					<div class="text-center">
+						<button type="button" class="btn btn-outline-warning">Submit</button>
+					</div><br>
+	  		</form>
+		</div>
+	</div><br>
+</div>
+
+<div class="container-fluid" id="footer">
+	<div class="row text-center">
+		<div class="col-md-3">
+			<h4 class="mt-3"><u>Product</u></h4>
+			<h6>Web Design</h6>
+			<h6>Web Development</h6>
+			<h6>WordPress</h6>
+			<h6>Logo & Graphics Design</h6>
+		</div>
+		<div class="col-md-3">
+			<h4 class="mt-3"><u>Links</u></h4>
+			<h6><a href="" class="text-dark ft">Home</a></h6>
+			<h6><a href="" class="text-dark ft">About Us</a></h6>
+			<h6><a href="" class="text-dark ft">Services</a></h6>
+			<h6><a href="" class="text-dark ft">Contacts</a></h6>
+		</div>
+		<div class="col-md-3">
+			<h4 class="mt-3"><u>Our Contact</u></h4>
+			<h6>+91-7745872023</h6>
+			<h6>laxman2madane@gmail.com</h6>
+			<h6>Yavatmal, Maharashtra</h6>
+			<h6>www.laxmikantwebsite.online</h6>
+		</div>
+		<div class="col-md-3">
+			<h4 class="mt-2"><u>Recent News</u></h4>
+			<div class="row">
+				<div class="col-md-6"><img src="news1.png" height="90px" width="100%"></div>
+				<div class="col-md-6"><img src="news2.jpg" height="90px" width="100%"></div>
+			</div>
+			<div class="row"><img src="logo.jpg" height="70px"></div>
+		</div>
+	</div>
+	<div class="container bg-dark mt-2">
+		<div class="row text-center"><b><h4 class="text-light my-2">Design & Developed By Laxmikant madane</h4></b></div>
+	</div>
+</div>
+
+
+ 	<!--top nav start-->
+				<script>
+						function myFunction() {
+						  var x = document.getElementById("myTopnav");
+						  if (x.className === "topnav") {
+						    x.className += " responsive";
+						  } else {
+						    x.className = "topnav";
+						  }
+						}
+				</script>
+		<!--top nav end-->
+
+<!--Header slider start-->
+<script type="text/javascript">
+	var sliderimg = document.getElementById("sliderimg")
+	var images = new Array(
+			"slider1.jpg",
+			"slider2.webp",
+			"slider3.jpg",
+			"slider4.png",
+			"slider.webp",
+			"laptop.jpg"
+		);
+	var len = images.length;
+	var i = 0;
+
+	function slider(){
+		if(i > len-1){
+			i = 0;
+		}
+		sliderimg.src = images[i];
+		i++;
+		setTimeout('slider()',2000);
+	}
+        
+</script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script>
+        var typed = new Typed('#typed',
+        {
+                    strings: ['Web Developer',"Software Developer",'Web Designer',"Graphics Designer"],
+                    backSpeed: 40,
+                    typeSpeed: 40,
+                    loop: true,
+                   shuffle: true
+        });
+    </script>
+<!--Header slider end-->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</div>
+</body>
+</html>
